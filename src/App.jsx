@@ -56,7 +56,7 @@ function App() {
           </div>
 
           <div className="rightSection">
-            <img src="58185047-fa79-48d8-9489-feba43250d50.jpg" alt="Developer" />
+           <img src={`${import.meta.env.BASE_URL}public\\58185047-fa79-48d8-9489-feba43250d50.jpg`} alt="Developer" />
           </div>
         </section>
 
@@ -105,7 +105,7 @@ function App() {
             I am Sourav, an aspiring Web Developer
             passionate about building websites.
           </p>
-          <a href="sourav_updated_resume.pdf" download='sourav_updated_resume.pdf'>
+          <a href={`${import.meta.env.BASE_URL}sourav_updated_resume.pdf`} download>
   Download My Resume
 </a>
         </section>
