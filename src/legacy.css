@@ -1,0 +1,276 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000021;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+
+header {
+  background-color: #0e0e5f;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 30px;
+  min-height: 70px;
+}
+
+.left {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff00ff;
+}
+
+/* Hero Section */
+
+.firstSection {
+  max-width: 1200px;
+  min-height: 500px;
+  margin: auto;
+  padding: 70px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.firstSection > div {
+  width: 45%;
+}
+
+.leftSection {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.purple,
+#element {
+  color: #ff00ff;
+}
+
+#element {
+  font-weight: 800;
+}
+
+.rightSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightSection img {
+  width: 80%;
+  max-width: 350px;
+  border-radius: 20%;
+  object-fit: cover;
+}
+
+/* Divider */
+
+hr {
+  border: none;
+  border-top: 1px solid #555;
+  margin: 20px auto;
+}
+
+/* Projects Section */
+
+.secondSection {
+  max-width: 1200px;
+  width: 90%;
+  margin: 70px auto;
+  height: auto;
+  padding-bottom: 60px;
+}
+
+.Text-grey {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+.secondSection h1 {
+  font-size: 2.3rem;
+  margin: 10px 0 35px;
+}
+
+.secondSection .box {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 22px;
+}
+
+.secondSection .vertical {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 25px 20px;
+  background-color: #0d0d36;
+  border: 1px solid #292956;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.secondSection .vertical:hover {
+  transform: translateY(-8px);
+  border-color: #ff00ff;
+  box-shadow: 0 8px 25px rgba(255, 0, 255, 0.12);
+}
+
+.vertical-title {
+  position: static;
+  margin: 0 0 15px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.vertical-desc {
+  position: static;
+  margin: 0;
+  color: #aaa;
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+.description {
+  text-align: left;
+}
+
+/* About and Contact */
+
+#about,
+#contact {
+  max-width: 1200px;
+  width: 90%;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #0d0d36;
+  border: 1px solid #292956;
+  border-radius: 14px;
+}
+
+#about h1,
+#contact h1 {
+  color: #ff00ff;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 25px;
+  min-height: 90px;
+  background-color: #09091b;
+  color: #aaa;
+  text-align: center;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav ul {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .left {
+    font-size: 1.3rem;
+  }
+
+  .firstSection {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .firstSection > div {
+    width: 100%;
+  }
+
+  .leftSection {
+    font-size: 2.2rem;
+  }
+
+  .rightSection img {
+    width: 65%;
+    max-width: 260px;
+  }
+
+  .secondSection h1 {
+    font-size: 1.8rem;
+  }
+
+  .secondSection .box {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    gap: 12px;
+    font-size: 0.85rem;
+  }
+
+  .leftSection {
+    font-size: 1.8rem;
+  }
+
+  .secondSection .box {
+    grid-template-columns: 1fr;
+  }
+}
